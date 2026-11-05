@@ -54,3 +54,7 @@ dev = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["app"]
+
+[tool.uv]
+# camel-oasis 0.2.5 hard-pins pillow==10.3.0 and pytest==8.2.0 (vulnerable); override to patched releases
+override-dependencies = ["pillow>=13.0.0", "pytest>=9.0.3"]
